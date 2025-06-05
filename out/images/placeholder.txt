@@ -1,0 +1,33 @@
+This folder will contain your product images.
+
+Recommended image structure:
+/public/images/categories/
+- cheesecake-category.jpg
+- tres-leches-category.jpg  
+- tiramisu-category.jpg
+- puff-pastry-category.jpg
+
+/public/images/products/
+- classic-ny-cheesecake.jpg
+- strawberry-cheesecake.jpg
+- chocolate-cheesecake.jpg
+- blueberry-cheesecake.jpg
+- traditional-tres-leches.jpg
+- coconut-tres-leches.jpg
+- chocolate-tres-leches.jpg
+- dulce-tres-leches.jpg
+- classic-tiramisu.jpg
+- berry-tiramisu.jpg
+- amaretto-tiramisu.jpg
+- white-chocolate-tiramisu.jpg
+- classic-cream-puffs.jpg
+- chocolate-eclairs.jpg
+- napoleon-cake.jpg
+- fruit-tarts.jpg
+- palmiers.jpg
+
+Image specifications:
+- Format: JPG or PNG
+- Size: 800x600px minimum
+- Style: Polaroid-style photos with good lighting
+- Background: Clean, neutral backgrounds work best
