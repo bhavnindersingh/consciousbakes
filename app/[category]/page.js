@@ -6,6 +6,11 @@ import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+export async function generateStaticParams() {
+  return categories.map((cat) => ({
+    category: cat.id,
+  }))
+}
 export default function CategoryPage({ params }) {
   const { category } = params
   const categoryData = categories.find(cat => cat.id === category)
