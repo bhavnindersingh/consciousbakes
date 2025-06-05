@@ -1,4 +1,3 @@
-'use client'
 
 import { products, categories } from '../../data/products'
 import ProductCard from '../../components/ProductCard'
