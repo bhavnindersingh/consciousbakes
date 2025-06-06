@@ -42,6 +42,9 @@ function App() {
         return [...prevItems, { ...product, quantity: product.quantity || 1 }];
       }
     });
+    
+    // Auto-open cart when item is added
+    setIsCartOpen(true);
   };
 
   const updateQuantity = (productId, newQuantity) => {
@@ -109,6 +112,7 @@ function App() {
           onAddToCart={addToCart}
           selectedCategory={selectedCategory}
           onProductClick={handleProductClick}
+          onCategoryChange={handleCategoryChange}
         />
       </main>
 

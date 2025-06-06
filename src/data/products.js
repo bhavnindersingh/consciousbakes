@@ -1,176 +1,142 @@
 export const products = [
-  // Cakes
+  // Birthday Cakes
   {
     id: 1,
-    name: "Chocolate Fudge Cake",
-    category: "cakes",
-    price: 45.99,
+    name: "Chocolate Fudge Birthday Cake",
+    category: "birthday-cakes",
+    price: 3799,
     image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=400&fit=crop",
-    description: "Rich, moist chocolate cake with decadent fudge frosting",
+    description: "Rich, moist chocolate cake with decadent fudge frosting and birthday decorations",
     bestseller: true
   },
   {
     id: 2,
-    name: "Red Velvet Cake",
-    category: "cakes",
-    price: 42.99,
+    name: "Red Velvet Birthday Cake",
+    category: "birthday-cakes",
+    price: 3549,
     image: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=400&fit=crop",
-    description: "Classic red velvet with cream cheese frosting",
+    description: "Classic red velvet with cream cheese frosting and birthday candles",
     bestseller: true
   },
   {
     id: 3,
-    name: "Vanilla Bean Cake",
-    category: "cakes",
-    price: 38.99,
+    name: "Vanilla Bean Birthday Cake",
+    category: "birthday-cakes",
+    price: 3299,
     image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=400&fit=crop",
-    description: "Light and fluffy vanilla cake with buttercream"
+    description: "Light and fluffy vanilla cake with buttercream and colorful decorations"
   },
   {
     id: 4,
-    name: "Lemon Drizzle Cake",
-    category: "cakes",
-    price: 35.99,
+    name: "Rainbow Birthday Cake",
+    category: "birthday-cakes",
+    price: 4199,
     image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop",
-    description: "Zesty lemon cake with sweet glaze"
+    description: "Multi-layered rainbow cake with vibrant colors and festive decorations"
   },
 
-  // Pastries
+  // Desserts
   {
     id: 5,
-    name: "Croissants (6 pack)",
-    category: "pastries",
-    price: 12.99,
+    name: "Tiramisu",
+    category: "desserts",
+    price: 899,
     image: "https://images.unsplash.com/photo-1555507036-ab794f4afe5e?w=400&h=400&fit=crop",
-    description: "Buttery, flaky French croissants",
+    description: "Classic Italian tiramisu with coffee-soaked ladyfingers",
     bestseller: true
   },
   {
     id: 6,
-    name: "Pain au Chocolat (4 pack)",
-    category: "pastries",
-    price: 14.99,
+    name: "Chocolate Mousse",
+    category: "desserts",
+    price: 699,
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=400&fit=crop",
-    description: "Classic chocolate-filled pastries"
+    description: "Rich and creamy chocolate mousse with whipped cream"
   },
   {
     id: 7,
-    name: "Danish Pastries (6 pack)",
-    category: "pastries",
-    price: 16.99,
+    name: "Fruit Tart",
+    category: "desserts",
+    price: 799,
     image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
-    description: "Assorted fruit and cream Danish pastries"
+    description: "Fresh seasonal fruit tart with pastry cream"
   },
   {
     id: 8,
-    name: "Almond Croissants (4 pack)",
-    category: "pastries",
-    price: 18.99,
+    name: "Cheesecake Slice",
+    category: "desserts",
+    price: 649,
     image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=400&fit=crop",
-    description: "Croissants filled with almond cream"
+    description: "Creamy New York style cheesecake with berry compote"
   },
 
-  // Breads
+  // Savoury
   {
     id: 9,
-    name: "Artisan Sourdough",
-    category: "breads",
-    price: 8.99,
+    name: "Chicken Puff",
+    category: "savoury",
+    price: 149,
     image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=400&fit=crop",
-    description: "Traditional sourdough with crispy crust"
+    description: "Flaky puff pastry filled with spiced chicken"
   },
   {
     id: 10,
-    name: "Whole Wheat Loaf",
-    category: "breads",
-    price: 6.99,
+    name: "Vegetable Samosa (4 pack)",
+    category: "savoury",
+    price: 199,
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=400&fit=crop",
-    description: "Healthy whole wheat bread"
+    description: "Crispy samosas filled with spiced vegetables"
   },
   {
     id: 11,
-    name: "Focaccia Bread",
-    category: "breads",
-    price: 9.99,
+    name: "Paneer Roll",
+    category: "savoury",
+    price: 179,
     image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=400&fit=crop",
-    description: "Italian herb focaccia with olive oil"
+    description: "Soft roll filled with spiced paneer and vegetables"
   },
   {
     id: 12,
-    name: "Baguette (2 pack)",
-    category: "breads",
-    price: 7.99,
+    name: "Egg Puff",
+    category: "savoury",
+    price: 129,
     image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
-    description: "Classic French baguettes"
+    description: "Golden puff pastry with spiced egg filling"
   },
 
-  // Cookies
+  // Bread
   {
     id: 13,
-    name: "Chocolate Chip Cookies (12 pack)",
-    category: "cookies",
-    price: 15.99,
+    name: "Artisan Sourdough",
+    category: "bread",
+    price: 299,
     image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=400&fit=crop",
-    description: "Classic chocolate chip cookies",
+    description: "Traditional sourdough with crispy crust",
     bestseller: true
   },
   {
     id: 14,
-    name: "Oatmeal Raisin Cookies (12 pack)",
-    category: "cookies",
-    price: 14.99,
+    name: "Whole Wheat Loaf",
+    category: "bread",
+    price: 199,
     image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400&h=400&fit=crop",
-    description: "Chewy oatmeal cookies with raisins"
+    description: "Healthy whole wheat bread, freshly baked"
   },
   {
     id: 15,
-    name: "Sugar Cookies (12 pack)",
-    category: "cookies",
-    price: 13.99,
+    name: "Focaccia Bread",
+    category: "bread",
+    price: 349,
     image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
-    description: "Soft sugar cookies with icing"
+    description: "Italian herb focaccia with olive oil and rosemary"
   },
   {
     id: 16,
-    name: "Double Chocolate Cookies (12 pack)",
-    category: "cookies",
-    price: 16.99,
+    name: "French Baguette (2 pack)",
+    category: "bread",
+    price: 249,
     image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=400&fit=crop",
-    description: "Rich double chocolate cookies"
-  },
-
-  // Cupcakes
-  {
-    id: 17,
-    name: "Vanilla Cupcakes (6 pack)",
-    category: "cupcakes",
-    price: 18.99,
-    image: "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400&h=400&fit=crop",
-    description: "Classic vanilla cupcakes with buttercream"
-  },
-  {
-    id: 18,
-    name: "Chocolate Cupcakes (6 pack)",
-    category: "cupcakes",
-    price: 19.99,
-    image: "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&h=400&fit=crop",
-    description: "Rich chocolate cupcakes with chocolate frosting"
-  },
-  {
-    id: 19,
-    name: "Red Velvet Cupcakes (6 pack)",
-    category: "cupcakes",
-    price: 21.99,
-    image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&h=400&fit=crop",
-    description: "Red velvet cupcakes with cream cheese frosting"
-  },
-  {
-    id: 20,
-    name: "Lemon Cupcakes (6 pack)",
-    category: "cupcakes",
-    price: 18.99,
-    image: "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400&h=400&fit=crop",
-    description: "Zesty lemon cupcakes with lemon buttercream"
+    description: "Classic French baguettes with crispy crust"
   }
 ];
 

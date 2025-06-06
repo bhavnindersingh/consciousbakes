@@ -2,98 +2,72 @@ import React, { useState } from 'react';
 
 const Header = ({ cartItems, onCartToggle, onCategoryChange }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currency, setCurrency] = useState('USD');
-
   const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-  const cartTotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
   const categories = [
-    { id: 'all', name: 'All Products' },
-    { id: 'cakes', name: 'Cakes' },
-    { id: 'pastries', name: 'Pastries' },
-    { id: 'breads', name: 'Breads' },
-    { id: 'cookies', name: 'Cookies' },
-    { id: 'cupcakes', name: 'Cupcakes' }
+    { id: 'birthday-cakes', name: 'Birthday Cakes' },
+    { id: 'desserts', name: 'Desserts' },
+    { id: 'savoury', name: 'Savoury' },
+    { id: 'bread', name: 'Bread' }
   ];
 
   return (
     <header className="header">
-      {/* Top Bar */}
-      <div className="header-top">
-        <div className="container">
-          <div className="header-top-content">
-            <div className="currency-selector">
-              <select 
-                value={currency} 
-                onChange={(e) => setCurrency(e.target.value)}
-                className="currency-select"
-              >
-                <option value="USD">$ USD</option>
-                <option value="EUR">€ EUR</option>
-                <option value="GBP">£ GBP</option>
-              </select>
-            </div>
-            <div className="header-actions">
-              <button className="cart-btn" onClick={onCartToggle}>
-                <i className="fas fa-shopping-bag"></i>
-                <span className="cart-count">{cartItemCount}</span>
-                <span className="cart-total">${cartTotal.toFixed(2)}</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Header */}
       <div className="header-main">
         <div className="container">
           <div className="header-content">
-            <div className="logo">
-              <h1>Conscious Bakes</h1>
-              <span className="tagline">Premium Artisanal Bakery</span>
-            </div>
-
-            {/* Desktop Navigation */}
+            {/* Left Navigation */}
             <nav className="desktop-nav">
+              <button 
+                className="nav-title"
+                onClick={() => onCategoryChange('all')}
+              >
+                Home
+              </button>
               <div className="nav-section">
-                <span className="nav-title">Shop</span>
+                <button className="nav-title">Shop</button>
                 <div className="nav-dropdown">
                   {categories.map(category => (
                     <button
                       key={category.id}
-                      onClick={() => onCategoryChange(category.id)}
                       className="nav-item"
+                      onClick={() => onCategoryChange(category.id)}
                     >
                       {category.name}
                     </button>
                   ))}
                 </div>
               </div>
-              <div className="nav-section">
-                <span className="nav-title">Featured</span>
-                <div className="nav-dropdown">
-                  <button className="nav-item">Best Sellers</button>
-                  <button className="nav-item">New Arrivals</button>
-                  <button className="nav-item">Special Occasions</button>
-                </div>
-              </div>
-              <div className="nav-section">
-                <span className="nav-title">Price</span>
-                <div className="nav-dropdown">
-                  <button className="nav-item">Under $10</button>
-                  <button className="nav-item">Under $25</button>
-                  <button className="nav-item">Under $50</button>
-                </div>
-              </div>
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button 
-              className="mobile-menu-btn"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <i className="fas fa-bars"></i>
-            </button>
+            {/* Center Logo */}
+            <div className="logo">
+              <img 
+                src="/android-icon-192x192.png" 
+                alt="Conscious Bakes" 
+                className="logo-img"
+              />
+            </div>
+
+            {/* Right Actions */}
+            <div className="header-actions">
+              <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </button>
+              <button className="cart-btn" onClick={onCartToggle}>
+                <span className="cart-text">Bag</span>
+                <svg className="cart-icon" viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="currentColor" d="M17 18a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H20a1 1 0 0 1 1 1c0 .17-.05.34-.12.5l-3.58 6.47c-.34.61-1 1.03-1.8 1.03H8.1l-.9 1.63-.03.12a.25.25 0 0 0 .25.25H19v2H7a2 2 0 0 1-2-2c0-.35.09-.68.24-.96l1.36-2.45L3 4H1V2m6 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2m9-7l2.78-5H6.14l4.72 5H16Z"/>
+                </svg>
+                {cartItemCount > 0 && 
+                  <span className="cart-badge">{cartItemCount}</span>}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -102,6 +76,15 @@ const Header = ({ cartItems, onCartToggle, onCategoryChange }) => {
       {isMenuOpen && (
         <div className="mobile-nav">
           <div className="container">
+            <button
+              onClick={() => {
+                onCategoryChange('all');
+                setIsMenuOpen(false);
+              }}
+              className="mobile-nav-item"
+            >
+              Home
+            </button>
             {categories.map(category => (
               <button
                 key={category.id}

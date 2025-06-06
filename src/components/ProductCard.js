@@ -11,8 +11,8 @@ const ProductCard = ({ product, onAddToCart, onProductClick }) => {
 
   const handleQuickAdd = (e) => {
     e.stopPropagation();
-    // For cakes, open product page to select size
-    if (product.category === 'cakes') {
+    // For birthday cakes, open product page to select size
+    if (product.category === 'birthday-cakes') {
       onProductClick(product);
     } else {
       // For other items, add directly to cart
@@ -34,15 +34,15 @@ const ProductCard = ({ product, onAddToCart, onProductClick }) => {
         <h3 className="product-name">{product.name}</h3>
         <p className="product-description">{product.description}</p>
         <div className="product-price">
-          ${product.price.toFixed(2)}
-          {product.category === 'cakes' && <span className="from-price">from</span>}
+          ₹{product.price}
+          {product.category === 'birthday-cakes' && <span className="from-price">from</span>}
         </div>
         
         <button 
           className="add-to-cart-btn"
           onClick={handleQuickAdd}
         >
-          {product.category === 'cakes' ? 'Choose Size' : 'Add To Cart'}
+          {product.category === 'birthday-cakes' ? 'Choose Size' : 'Add To Cart'}
         </button>
       </div>
     </div>

@@ -13,7 +13,7 @@ const ProductPage = ({ product, isOpen, onClose, onAddToCart }) => {
     'Extra Large (12")': { multiplier: 3, serves: '18-20 people' }
   };
 
-  const isCake = product?.category === 'cakes';
+  const isCake = product?.category === 'birthday-cakes';
 
   React.useEffect(() => {
     if (product && isCake && !selectedSize) {
@@ -75,7 +75,7 @@ const ProductPage = ({ product, isOpen, onClose, onAddToCart }) => {
             <div className="product-page-header">
               <h1>{product.name}</h1>
               <div className="product-page-price">
-                ${selectedPrice.toFixed(2)}
+                ₹{selectedPrice}
                 {isCake && selectedSize && (
                   <span className="size-info">({selectedSize})</span>
                 )}
@@ -104,7 +104,7 @@ const ProductPage = ({ product, isOpen, onClose, onAddToCart }) => {
                       onClick={() => handleSizeChange(size)}
                     >
                       <div className="size-name">{size}</div>
-                      <div className="size-price">${(product.price * info.multiplier).toFixed(2)}</div>
+                      <div className="size-price">₹{Math.round(product.price * info.multiplier)}</div>
                       <div className="size-serves">{info.serves}</div>
                     </div>
                   ))}
@@ -132,7 +132,7 @@ const ProductPage = ({ product, isOpen, onClose, onAddToCart }) => {
             {/* Total Price */}
             <div className="total-price">
               <div className="total-label">Total:</div>
-              <div className="total-amount">${(selectedPrice * quantity).toFixed(2)}</div>
+              <div className="total-amount">₹{selectedPrice * quantity}</div>
             </div>
 
             {/* Add to Cart Button */}
